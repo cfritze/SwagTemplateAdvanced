@@ -1,0 +1,28 @@
+{% sw_extends '@storefront/storefront/layout/navigation/navigation.html.twig' %}
+
+
+{% block layout_main_navigation %}
+
+ {% if theme_config('activateStickyHeader') %}
+
+    <div class="js-navigation-wrapper" 
+    data-sticky-header="true"
+    data-sticky-header-options='{
+        "shownOnScrollPosition": "{{ theme_config('shownOnScrollPosition') }}" 
+    }'>
+
+
+
+    <!-- ueberschreibt die Daten in Main JS -->
+
+        {{ parent() }}
+
+    </div>
+
+     {% else %}
+
+         {{ parent() }}
+
+     {% endif %}
+
+{% endblock %}

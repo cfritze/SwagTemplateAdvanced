@@ -1,0 +1,57 @@
+{
+  "name": "SwagTemplateAdvanced",
+  "author": "Shopware AG",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@SwagTemplateAdvanced"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/swag-template-advanced.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+  "config": {
+    "blocks": {
+      "jsPlugins": {
+        "label": {
+          "en-GB": "JS Plugins",
+          "de-DE": "JS Plugins"
+        }
+      }
+    },
+    "fields": {
+      "activateStickyHeader": {
+        "label": {
+          "en-GB": "Use Sticky Header",
+          "de-DE": "Use Sticky Header"
+        },
+        "type": "switch",
+        "custom": {
+          "bordered": true
+        },
+        "value": false,
+        "editable": true,
+        "block": "jsPlugins"
+      },
+      "shownOnScrollPosition": {
+        "label": {
+          "en-GB": "Sticky Header Show Scroll Position",
+          "de-DE": "Sticky Header Show Scroll Position"
+        },
+        "type": "int",
+        "value": 500,
+        "editable": true,
+        "block": "jsPlugins"
+      }
+    }
+  }
+}
